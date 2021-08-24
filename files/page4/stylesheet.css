@@ -1,0 +1,96 @@
+@keyframes loading1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loading2 {
+  0% {
+    transform: scale(0,1);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+html {
+  height: 98%;
+  background: url('../imgs/background.png');
+  background-position: center;
+  background-size: 280vh;
+  font-family: 'メイリオ';
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  margin: 0 100px;
+}
+
+body {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 50px 1fr 1fr 50px;
+  place-items: center;
+  animation: loading1 0.4s;
+}
+
+h1 {
+  display: flex;
+  font-size: 5vw;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+h1:before {
+  bottom: 0;
+  width: 100%;
+  content: '';
+  position: absolute;
+  animation: loading2 1s;
+  border-bottom: solid 2px green;
+}
+
+.select_menu {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.row {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  font-size: 3vw;
+  margin: 0;
+  padding: 0;
+  height: 70%;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #9ec34b;
+  border-radius: 40px;
+  color: white;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  height: 80%;
+  width: 20%;
+  background-color: #aed35b;
+}
