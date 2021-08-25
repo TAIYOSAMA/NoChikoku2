@@ -31,7 +31,7 @@ html {
 body {
   height: 100%;
   display: grid;
-  grid-template-rows: 50px 1fr 1fr 50px;
+  grid-template-rows: 50px 1fr 1fr 30px 30px;
   place-items: center;
   animation: loading1 0.4s;
 }
@@ -75,4 +75,19 @@ h1:before {
   height: 47%;
   width: 42%;
   background-color: #aed35b;
+}
+
+a,a:visited {
+  color: blue;
+  font-size: 1.5vw;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:hover {
+  color: darkblue;
+}
+
+p , p a{
+  font-size: 1vw;
 }
