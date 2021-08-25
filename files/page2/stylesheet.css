@@ -21,7 +21,7 @@ html {
   background: url('../imgs/background.png');
   background-position: center;
   background-size: 280vh;
-  font-family: 'メイリオ';
+  font-family: sans-serif;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
