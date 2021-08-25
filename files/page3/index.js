@@ -24,6 +24,7 @@ if (grade == 0) {
 const header = document.querySelector('h1');
 header.textContent = String(grade.length+1)+header.textContent;
 
+let click_log=0;
 let btn_number = 1;
 for (row=1; row<=3; row++) {
   var menu_row = document.createElement('div');
@@ -34,13 +35,16 @@ for (row=1; row<=3; row++) {
     btn.textContent = String(btn_number);
     btn.className = 'btn';
     btn.onclick = function() {
-      grade.push(parseInt(this.id))
-      grade_number = new URL(window.location.href).searchParams.get('grade_number');
-      if (parseInt(grade_number)==grade.length) {
-        window.location = '../page4/index.html?grade='+grade;
-      } else {
-        console.log(parseInt(grade_number),grade.length);
-        window.location = '../page3/index.html?grade_number='+grade_number+'&grade='+grade;
+      if (click_log==0) {
+        grade.push(parseInt(this.id));
+        grade_number = new URL(window.location.href).searchParams.get('grade_number');
+        if (parseInt(grade_number)==grade.length) {
+          window.location = '../page4/index.html?grade='+grade;
+        } else {
+          console.log(parseInt(grade_number),grade.length);
+          window.location = '../page3/index.html?grade_number='+grade_number+'&grade='+grade;
+        };
+        click_log=1;
       };
     };
     btn.setAttribute('id',btn_number);
