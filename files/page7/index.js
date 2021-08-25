@@ -228,4 +228,9 @@ function writeToPDF() {
     window.open(url);
     window.location.reload();
   });
-}
+};
+
+const btn_a = document.getElementById('home_btn');
+btn_a.onclick = function() {
+  window.location = '../page1';
+};
