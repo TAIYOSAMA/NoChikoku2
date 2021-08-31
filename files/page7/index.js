@@ -219,6 +219,10 @@ function writeToPDF() {
       };
     };
   };
+  doc.info.Title = '遅刻者チェック表'+String(month)+'月';
+  doc.info.Author = 'TAIYOSAMA';
+  doc.info.Subject = 'Info---taiyo180601@gmail.com';
+  doc.info.Keywords = '遅刻者チェック表';
   doc.end();
   stream.on('finish', function() {
     // get a blob you can do whatever you like with
