@@ -31,7 +31,7 @@ html {
 body {
   height: 100%;
   display: grid;
-  grid-template-rows: 50px 1fr 1fr 50px;
+  grid-template-rows: 50px 1fr 1fr 1fr 50px;
   place-items: center;
   animation: loading1 0.4s;
 }
